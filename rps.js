@@ -5,7 +5,6 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     let playerPoint = 0
-    playerSelection = playerSelection.toLowerCase();
 
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'paper') ||
@@ -27,6 +26,7 @@ function game(roundsTotal = 5) {
 
     while (roundsPlayed < roundsTotal) {
         let playerSelection = prompt('rock, paper, or scissors?')
+        playerSelection = playerSelection.toLowerCase();
         if ((playerSelection != 'rock') &&
             (playerSelection != 'paper') &&
             (playerSelection != 'scissors'))
